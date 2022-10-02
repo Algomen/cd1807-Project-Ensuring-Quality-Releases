@@ -13,3 +13,7 @@ application_type = "AppService"
 virtual_network_name = "agmVN"
 address_space = ["10.5.0.0/16"]
 address_prefix_test = "10.5.1.0/24"
+
+# VM
+vm_admin_username = "alvaro"
+vm_public_key = "~/.ssh/az_eqr_id_rsa.pub"
