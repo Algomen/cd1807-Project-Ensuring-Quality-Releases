@@ -33,7 +33,7 @@ stages:
           displayName: Terraform Init
           inputs:
             command: 'init'
-            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environment/test'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/environment/test'
             commandOptions: '-backend-config=$(azsecret.secureFilePath)'
             backendType: 'azurerm'
             backendServiceArm: 'ConnectionToMyPersonalAccount'
