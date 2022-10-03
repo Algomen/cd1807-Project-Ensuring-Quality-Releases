@@ -53,7 +53,7 @@ stages:
           inputs:
             azureSubscription: 'ConnectionToMyPersonalAccount'
             scriptLocation: inlineScript
-            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environment/test'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
             addSpnToEnvironment: true
             inlineScript: |
                 export ARM_CLIENT_ID=$(client_id)
@@ -67,12 +67,12 @@ stages:
               command: 'plan'
               environmentServiceName: 'ConnectionToMyPersonalAccount'
               allowTelemetryCollection: true
-              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environment/test'
+              workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
               
         - task: TerraformCLI@0
           displayName: Terraform Apply
           inputs:
             command: 'apply'
             environmentServiceName: 'ConnectionToMyPersonalAccount'
-            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environment/test'
+            workingDirectory: '$(System.DefaultWorkingDirectory)/terraform/environments/test'
             allowTelemetryCollection: true
