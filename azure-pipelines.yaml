@@ -125,7 +125,7 @@ stages:
               - task: AzureRmWebAppDeployment@4
                 inputs:
                   ConnectionType: 'AzureRM'
-                  azureSubscription: 'ConnectionToMyPersonalAccount'
+                  azureSubscription: 'ConnectionToWebApp'
                   appType: 'webApp'
                   WebAppName: 'AppService-AppService'
                   packageForLinux: '$(Pipeline.Workspace)/drop-fakerestapi/fakerestapi-$(Build.BuildId).zip'
